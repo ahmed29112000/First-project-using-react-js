@@ -1,0 +1,36 @@
+.container {
+  width: 75%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container input {
+  display: none;
+}
+
+.container svg {
+  overflow: visible;
+  transition: 0.5s ease;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+/* .container input:checked ~ svg {
+  border-radius: 4px;
+  border: 2px solid white;
+} */
+.container input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
